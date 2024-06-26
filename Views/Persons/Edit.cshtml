@@ -1,0 +1,41 @@
+﻿@model FormApplication.Models.PersonDto
+@{
+    
+}
+
+<div class="p-5" style="background-color:#FBCF4F">
+    <h1 class="display-5 m-2"> Edit Person Data</h1>
+    <form method="post" asp-action="AddData">
+        <label class="textFieldTitle"> Id</label>
+        <input class="txtFieldStyle form-control" disabled asp-for="Id" placeholder="Enter Id" />
+        <br /> 
+        <label class="textFieldTitle" asp-for="Name"> Name</label>
+        <input class="txtFieldStyle form-control" placeholder="Enter Name" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <br />
+
+        <label class="textFieldTitle" asp-for="Company"> Company</label>
+        <input class="txtFieldStyle form-control" asp-for="Company" placeholder="ABC company" />
+        <span asp-validation-for="Company" class="text-danger"></span>
+        <br />
+        <label class="textFieldTitle" asp-for="Phone"> Phone</label>
+        <input class="txtFieldStyle form-control" asp-for="Phone" placeholder="0xxxxxxxxxx" type="number" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+        <br />
+        <label class="textFieldTitle" asp-for="Email"> Email</label>
+        <input class="txtFieldStyle form-control" asp-for="Email" placeholder="email@mail.com" type="email" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+        <br />
+        <label class="textFieldTitle" asp-for="ReasonForContact"> Reason For Contact</label>
+        <input class="txtFieldStyle form-control" asp-for="ReasonForContact" placeholder="Enter reason" type="text" />
+        <span asp-validation-for="ReasonForContact" class="text-danger"></span>
+        <br />
+        <label class="textFieldTitle" asp-for="MoreDetails"> Anything else we need to know</label>
+        <textarea class="discription form-control" asp-for="MoreDetails" placeholder="Enter your description here..."></textarea>
+
+        <button class="btn btn-primary m-3 btnStyle" type="submit" asp-controller="Persons" asp-action="UpdateDatabase">Update</button>
+        
+
+    </form>
+    
+</div>

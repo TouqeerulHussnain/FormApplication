@@ -1,0 +1,40 @@
+﻿@model List<Person>
+@{
+}
+<div>
+    <p class="display-5 m-3">View data</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <td style="font-weight:600;">Id</td>
+                <td style="font-weight:600;">Name</td>
+                <td style="font-weight:600;">Company</td>
+                <td style="font-weight:600;">Phone</td>
+                <td style="font-weight:600;">Email</td>
+                <td style="font-weight:600;">Reason for Contact</td>
+                <td style="font-weight:600;">More Details</td>
+                <td style="font-weight:600;">Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            
+                @foreach( Person person in Model)
+                {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.Name</td>
+                    <td>@person.Company</td>
+                    <td>@person.Phone</td>
+                    <td>@person.Email</td>
+                    <td>@person.ReasonForContact</td>
+                    <td>@person.MoreDetails</td>
+                    <td> <a asp-controller="Persons" asp-action="Edit" class="btn btn-primary" asp-route-id="@person.Id">Edit</a>
+                        <a asp-controller="Persons" asp-action="Delete" class="btn btn-danger" asp-route-id="@person.Id">Delete</a>
+                    </td>
+                </tr>
+                }
+            
+        </tbody>
+
+    </table>
+</div>

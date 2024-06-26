@@ -1,0 +1,80 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.txtFieldStyle {
+    width: 95%;
+    border-radius: 15px;
+    border-color: transparent;
+    border: none;
+}
+.txtFieldStyle:focus {
+        border: none;
+        border-color: transparent;
+        
+        outline:none;
+}
+.textFieldTitle{
+    font-weight:700;
+    font-size:20px;
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:5px;
+}
+
+.formPadding{
+    padding:20px;
+}
+
+.btn.btnStyle{
+    border-radius:15px;
+}
+.discription {
+   width: 100%; /* Full width of the container */
+    height: 200px;
+    border-radius:15px;
+    border:none;
+}
+
+.appImag{
+    display:block;
+    height:auto;
+    width:100%;
+}
+.firstBox {
+    display: block;
+    background-color: #FFF3E8;
+    border-radius: 15px 0px 0px 20px
+}
+.SecondBox {
+    display: block;
+    background-color: #FBCF4F;
+    border-radius: 0px 15px 15px 0px
+}
+@media (max-width: 576px ) {
+    .col-sm-6.firstBox {
+        border-radius: 15px 15px 0px 0px; /* Adjusted border-radius for medium screens */
+    }
+    .col-sm-6.SecondBox {
+        border-radius: 0px 0px 15px 15px; /* Adjusted border-radius for medium screens */
+    }
+}
